@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import QuestionCard from 'components/QuestionCard';
 import { Difficulty, fetchQuizQuestions, QuestionState } from 'services/API';
+import { Container } from 'styles';
 
 const TOTAL_QUESTIONS = 10;
 
@@ -64,7 +65,7 @@ const App = () => {
   };
 
   return (
-    <main className="App">
+    <Container>
       <h1>React Quiz</h1>
 
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
@@ -98,7 +99,7 @@ const App = () => {
           Next
         </button>
       ) : null}
-    </main>
+    </Container>
   );
 };
 
